@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cat&bulb</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="bg-black p-24 bg-contain flex flex-col items-center gap-2">
+        <img id="bulbImage" src="bulbimage.jpg" alt="bulb image"class="h-28"/>
+        <img id="catImage" src="cat image.jpg" alt="cat image" class="h-60"/>
+        <p id="paraElement" class="text-white font-[Poppins]">Switched on</p>
+        <div class="font-[Poppins] space-x-1">
+        <button id="onButton" class="bg-white rounded-lg p-1">On</button>
+        <button id="offButton" class="bg-white rounded-lg p-1">Off</button>
+       </div>
+        <!-- Include your JavaScript code in this script tag -->
+        <script>
+            // Access DOM elements
+            const bulbImage = document.getElementById("bulbImage");
+            const catImage = document.getElementById("catImage");
+            const paraElement = document.getElementById("paraElement");
+            const onButton = document.getElementById("onButton");
+            const offButton = document.getElementById("offButton");
+
+            // Add event listener for 'On' button
+            onButton.addEventListener("click", function() {
+                console.log("On button clicked");
+                bulbImage.src = "bulbimage.jpg"; // Set the src attribute to the image
+                catImage.src = "cat image.jpg";
+                paraElement.textContent = "Switched on"; // Update the paragraph text
+            });
+
+            // Add event listener for 'Off' button
+            offButton.addEventListener("click", function() {
+                console.log("paraElement");
+                bulbImage.src = "off bulb.jpg"; // Clear the src attribute to hide the image
+                catImage.src = "cat eye.jpg";
+                paraElement.textContent = "Switched off"; // Update the paragraph text
+            });
+         </script>
+    </section>
+</body>
+</html>
